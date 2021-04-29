@@ -2,6 +2,22 @@ body{
     font-family: 'Ubuntu', sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
+
+h1{
+    color: #eeeeee;
+    font-weight: bold;
+}
+
+h3{
+    color: #9BE6AD;
+    text-shadow: 0 0 2px #393e46;
+    font-weight: bold;
+}
+
+/* Barra de Navegacion */
 .navbar{
     padding: 1.2% 4% 1.2% 7%;
     background-color: #00adb5;
@@ -12,7 +28,8 @@ body{
 }
 
 .navbar-nav .nav-link:hover{
-    color: #ffff;
+    color: #eeee;
+    font-weight: bold;
 }
 
 .ham-icon{
@@ -20,7 +37,7 @@ body{
 }
 
 .ham-icon:hover{
-    color:  #ffff;
+    color:  #eeee;
 }
 
 .navbar-brand{
@@ -30,10 +47,53 @@ body{
 }
 
 .navbar-brand:hover{
-    color: #ffff;
+    color: #eeee;
 }
 
 .nav-item{
     padding-left: 8px;
     font-size: 1.1rem;
+}
+
+/* Carrusel */
+.carousel{
+    background-color: #2CC5A3;
+    text-align: center;
+}
+
+.carousel-item{
+    padding: 5% 7%;
+}
+
+.carousel-title{
+    padding-bottom: 2%;
+    line-height: 1.4;
+}
+
+.carousel-button{
+    color: #eeee;
+}
+
+.carousel-img{
+    width: 35%;
+    height: auto;
+    border-radius: 50%;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+footer{
+    background-color: #eeee;
+    text-align: center;
+    padding: 3% 10%;
+}
+
+.social-icon{
+    margin: 0 30px 30px;
+    color: #393e46;
+}
+
+.social-icon:hover{
+    color: #00adb5;
+    font-weight: bold;
 }
