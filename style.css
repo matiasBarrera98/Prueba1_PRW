@@ -1,7 +1,39 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .navbar{
-    padding: 1.5% 7% 1.5% 6%;
+    padding: 1.2% 4% 1.2% 7%;
+    background-color: #00adb5;
+}
+
+.navbar-nav .nav-link{
+    color: #393e46;
+}
+
+.navbar-nav .nav-link:hover{
+    color: #ffff;
+}
+
+.ham-icon{
+    color:  #393e46;
+}
+
+.ham-icon:hover{
+    color:  #ffff;
+}
+
+.navbar-brand{
+    font-weight: bold;
+    font-size: 2rem;
+    color: #393e46;
+}
+
+.navbar-brand:hover{
+    color: #ffff;
 }
 
 .nav-item{
-    padding-left: 5px;
+    padding-left: 8px;
+    font-size: 1.1rem;
 }
