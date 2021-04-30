@@ -10,7 +10,7 @@ a{
     text-decoration: none;
 }
 
-h1, h3{
+h1, h3, h5{
     font-weight: bold;
 }
 
@@ -50,7 +50,7 @@ h1{
 }
 
 /* Carrusel */
-.carousel, .gallery{
+.carousel, .gallery, .doctors{
     background-color: #2CC5A3;
     text-align: center;
 }
@@ -76,6 +76,8 @@ h1{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+/* Pie de Pagina */
+
 footer{
     background-color: #eeee;
     text-align: center;
@@ -94,6 +96,9 @@ footer{
 
 /* Galería de Mascotas Atendidas */
 
+.gallery{
+    padding-bottom: 2%;
+}
 .gallery-title{
     padding-top: 2%;
 }
@@ -110,4 +115,26 @@ footer{
 
 .gallery-col h3{
     color: #eeee;
+}
+
+/* Doctores */
+
+.doctors{
+    padding: 3% 7%;
+}
+
+.doc-col{
+    padding: 2% 3%;
+}
+
+.card{
+    margin: auto;
+}
+
+.card-body{
+    background-color: #eeee;
+}
+
+.card-title{
+    color: #393e46;
 }
