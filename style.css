@@ -1,3 +1,7 @@
+html{
+    background-color: #eeee;
+}
+
 body{
     font-family: 'Ubuntu', sans-serif;
 }
@@ -6,15 +10,17 @@ a{
     text-decoration: none;
 }
 
-h1{
-    color: #eeeeee;
+h1, h3{
     font-weight: bold;
 }
 
-h3{
+h1{
+    color: #eeee;
+}
+
+#main-carousel h3{
     color: #9BE6AD;
     text-shadow: 0 0 2px #393e46;
-    font-weight: bold;
 }
 
 /* Barra de Navegacion */
@@ -23,21 +29,13 @@ h3{
     background-color: #00adb5;
 }
 
-.navbar-nav .nav-link{
+.navbar-nav .nav-link, .ham-icon, .rights{
     color: #393e46;
 }
 
-.navbar-nav .nav-link:hover{
+.navbar-nav .nav-link:hover, .ham-icon:hover, .navbar-brand:hover{
     color: #eeee;
     font-weight: bold;
-}
-
-.ham-icon{
-    color:  #393e46;
-}
-
-.ham-icon:hover{
-    color:  #eeee;
 }
 
 .navbar-brand{
@@ -46,17 +44,13 @@ h3{
     color: #393e46;
 }
 
-.navbar-brand:hover{
-    color: #eeee;
-}
-
 .nav-item{
     padding-left: 8px;
     font-size: 1.1rem;
 }
 
 /* Carrusel */
-.carousel{
+.carousel, .gallery{
     background-color: #2CC5A3;
     text-align: center;
 }
@@ -96,4 +90,24 @@ footer{
 .social-icon:hover{
     color: #00adb5;
     font-weight: bold;
+}
+
+/* Galería de Mascotas Atendidas */
+
+.gallery-title{
+    padding-top: 2%;
+}
+.gallery img{
+    width: 50%;
+    margin: auto;
+    border-radius: 10%;
+}
+
+.gallery-col{
+    margin-top: 1%;
+    padding: 2% 2% 1%;
+}
+
+.gallery-col h3{
+    color: #eeee;
 }
