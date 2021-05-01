@@ -19,8 +19,7 @@ h1{
 }
 
 #main-carousel h3{
-    color: #9BE6AD;
-    text-shadow: 0 0 2px #393e46;
+    color:  #393e46;
 }
 
 /* Barra de Navegacion */
@@ -114,7 +113,7 @@ footer{
 }
 
 .gallery-col h3{
-    color: #eeee;
+    color: #393e46;
 }
 
 /* Doctores */
