@@ -50,7 +50,7 @@ h1{
 }
 
 /* Carrusel */
-.carousel, .gallery, .doctors{
+.carousel, .gallery, .doctors, .form{
     background-color: #2CC5A3;
     text-align: center;
 }
@@ -97,7 +97,7 @@ footer{
 /* Galería de Mascotas Atendidas */
 
 .gallery{
-    padding-bottom: 2%;
+    padding: 2%;
 }
 .gallery-title{
     padding-top: 2%;
@@ -110,7 +110,7 @@ footer{
 
 .gallery-col{
     margin-top: 1%;
-    padding: 2% 2% 1%;
+    padding: 2% 1% 1%;
 }
 
 .gallery-col h3{
@@ -137,4 +137,33 @@ footer{
 
 .card-title{
     color: #393e46;
+}
+
+/* Formulario Contacto */
+
+.form{
+    background-color: #2CC5A3;
+    padding: 3% 7%;
+}
+
+.form-control{
+    background-color: #eeee;
+}
+
+.contact-title{
+    padding: 1% 6%;
+}
+
+.form .row{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.form .btn-primary{
+    background-color: #00adb5;
+}
+
+.form .btn-primary{
+    background-color: #393e46;
+    border-color:#eeee;
 }
