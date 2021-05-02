@@ -49,7 +49,7 @@ h1{
 }
 
 /* Carrusel */
-.carousel, .gallery, .doctors, .form, .prices{
+.carousel, .gallery, .doctors, .form, .prices, .consultas{
     background-color: #2CC5A3;
     text-align: center;
 }
@@ -185,4 +185,29 @@ footer{
   border: solid rgba(0, 0, 0, .15);
   border-width: 1px 0;
   box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+/* Consultas */
+
+.consultas{
+    padding: 3% 7%;
+    color: #393e46;
+}
+
+.img-consulta{
+    width: 50%;
+    border-radius: 10%;
+}
+
+.filas-consulta{
+    padding-top: 4%;
+}
+
+.consulta{
+    text-align: left;
+    padding-left: 4%;
+}
+
+.desc-consulta{
+    padding-left: 5%;
 }
