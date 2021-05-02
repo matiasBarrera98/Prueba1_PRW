@@ -10,7 +10,7 @@ a{
     text-decoration: none;
 }
 
-h1, h3, h5{
+h1, h2, h3, h5, .card h4{
     font-weight: bold;
 }
 
@@ -49,7 +49,7 @@ h1{
 }
 
 /* Carrusel */
-.carousel, .gallery, .doctors, .form{
+.carousel, .gallery, .doctors, .form, .prices{
     background-color: #2CC5A3;
     text-align: center;
 }
@@ -165,4 +165,24 @@ footer{
 .form .btn-primary{
     background-color: #393e46;
     border-color:#eeee;
+}
+
+/* Peluqueria */
+
+.prices{
+    padding: 3% 7%;
+}
+
+.pelu-titles{
+    text-align: left;
+    padding: 2% 0 2% 4%;
+    color: #393e46;
+}
+
+.divisor {
+  height: 3rem;
+  background-color: #2CC5A3;
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
 }
