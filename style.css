@@ -49,7 +49,8 @@ h1{
 }
 
 /* Carrusel */
-.carousel, .gallery, .doctors, .form, .prices, .consultas{
+.carousel, .gallery, .doctors, .form, 
+.prices, .consultas, .vacunas, .planes{
     background-color: #2CC5A3;
     text-align: center;
 }
@@ -210,4 +211,36 @@ footer{
 
 .desc-consulta{
     padding-left: 5%;
+}
+
+.desc-consulta p{
+    font-size: 1.3rem;
+}
+
+/* Vacunacion */
+
+.vacunas h1, .planes h1{
+    padding-top: 3%;
+}
+
+.vacunas{
+    color:#393e46;
+}
+
+.vac{
+    padding-top: 2%;
+}
+
+.vac-img{
+    width: 30%;
+    border-radius: 30%;
+    padding-top: 2%;
+}
+
+.row-vacunas, .row-planes{
+    padding: 3% 4% 4%;
+}
+
+.col-vacunas, .col-planes{
+    padding: 2% 3%;
 }
