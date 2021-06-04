@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="main_page">
 
     <!-- Barra Navegacion -->
     <nav class="navbar navbar-expand-lg">
@@ -112,6 +112,17 @@
 
     <!-- Pie de pagina -->
     <footer>
+        <div id="w-cont" class="container-fluid">
+            <div class="row weather">
+                <div id="ubicacion" class="col-md-6 w-col">
+
+                </div>
+                <div id="tiempo" class="col-md-6 w-col">
+
+                </div>
+            </div>
+        </div>
+        
         <div class="icon-container">
         <a href="https://twitter.com/?lang=es"><i class="fab fa-twitter fa-2x social-icon"></i></a>
         <a href="https://www.facebook.com/"><i class="fab fa-facebook-f fa-2x social-icon"></i></a>
@@ -123,7 +134,8 @@
         <p class="rights">© Copyright 2021 VetRicci</p>
     </footer>
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
