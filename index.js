@@ -58,7 +58,7 @@ function manejo_respuesta(locacion, clima){
     else if(nublado.includes(clima.condition.code)){
         icon = '<h5>' + desc + ' <i class="fas fa-cloud fa-2x cloud"></i></h5>';
     }
-    else if(lluvia.includes(176)){
+    else if(lluvia.includes(clima.condition.code)){
         icon = '<h5>' + desc + ' <i class="fas fa-cloud-showers-heavy fa-2x"></i></h5>';
     }
 
