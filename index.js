@@ -1,61 +1,97 @@
-var soleado = 113
-var nublado = [116, 119, 122, 143, 248, 260, 200]
-var lluvia = [176, 185, 263, 266, 281, 284, 293, 296, 299, 302, 305, 308, 311]
 
+// codigos del clima que entrega la API
+var soleado = 1000
+var nublado = [1003, 1006, 1009, 1030, 1135,  1147, 1087]
+var lluvia = [1063, 1069, 1072, 1150, 266, 281, 284, 293, 296, 299, 302, 305, 308, 311]
+
+// función que maneja el clima en general
 function clima() {
-    if ($('#main_page')) {
-        navigator.geolocation.getCurrentPosition(function (p) {
-            var lat;
-            var lon;
-            lat = p.coords.latitude;
-            lon = p.coords.longitude;
-            llamado(lat, lon);
-        })
-
-    }
+    // if ($('#main_page')) {
+    // }
+    navigator.geolocation.getCurrentPosition(function (p) {
+        var lat;
+        var lon;
+        lat = p.coords.latitude;
+        lon = p.coords.longitude;
+        llamado(lat, lon);
+    })
 }
 
+//llamado a la API del clima y callback a la funcion que despliega la información en la página
 function llamado(lat, lon) {
     $.get({
-        url: 'http://api.weatherstack.com/current',
+        url: 'https://api.weatherapi.com/v1/current.json',
         data: {
-            access_key: 'a2acbc81e3d7e513bf9de9b23ba348a5',
-            query: lat + ', ' + lon,
-            units: 'm'
+            key: '672af457a1974972960214033210606',
+            q: lat + ", " + lon,
+            lang: 'es',
+            units: 'metrics'
         },
         datatype: 'json',
-        success: function (response) {
+        success: function(response){
             console.log(response);
-            manejo_respuesta(response.location, response.current);
+            manejo_respuesta(response.location, response.current)
         }
     })
 }
 
+//Función que analiza la respuesta de la API del clima, selecciona los iconos correspondientes y
+//lo agrega a la página
 function manejo_respuesta(locacion, clima){
     $("#w-cont").addClass("weather-cont");
-    $(".weather").prepend("<h3>Clima Actual</h3>");
-    $("#ubicacion").append("<h5>Ubicación: <i class='fas fa-map-marker-alt fa-2x location'></i></h5> <h6>" 
+    $(".weather").prepend("<h3>Clima Actual y Ubicación</h3>");
+    $("#ubicacion").append("<h5>Tiempo en: <i class='fas fa-map-marker-alt fa-2x location'></i></h5> <h6>" 
     + locacion.name + ", " + locacion.region + "</h6> ");
 
+    var desc = clima.condition.text;
     var icon;
 
-    if (clima.weather_code === soleado){
+    if (clima.condition.code === soleado){
         if (clima.is_day === "yes"){
-            icon = '<h5>Soleado <i class="fas fa-sun fa-2x sun"></i></h5>';
+            icon = '<h5>' + desc + ' <i class="fas fa-sun fa-2x sun"></i></h5>';
         }
         else{
-            icon = '<h5>Despejado <i class="fas fa-moon fa-2x moon"></i></h5>';
+            icon = '<h5>' + desc + ' <i class="fas fa-moon fa-2x moon"></i></h5>';
         }
         
     }
-    else if(nublado.includes(clima.weather_code)){
-        icon = '<h5>Nublado <i class="fas fa-cloud fa-2x cloud"></i></h5>';
+    else if(nublado.includes(clima.condition.code)){
+        icon = '<h5>' + desc + ' <i class="fas fa-cloud fa-2x cloud"></i></h5>';
     }
     else if(lluvia.includes(176)){
-        icon = '<h5>Lluvia <i class="fas fa-cloud-showers-heavy fa-2x"></i></h5>';
+        icon = '<h5>' + desc + ' <i class="fas fa-cloud-showers-heavy fa-2x"></i></h5>';
     }
 
-    $("#tiempo").append(icon + '<h6>Temperatura: ' + clima.temperature + '˚C</h6>');
+    $("#tiempo").append(icon + '<h6>Temperatura: ' + clima.temp_c + '˚C</h6>');
 }
 
 clima();
+
+//Funcion para la ubicacion en google maps
+function myMap() {
+    //se solicita la ubicación
+    navigator.geolocation.getCurrentPosition(function (p, ) {
+        var lat;
+        var lon;
+        lat = p.coords.latitude;
+        lon = p.coords.longitude;
+        mapa(lat, lon);
+    })
+
+}
+
+//Funcion que crea el mapa con las coordenadas de la API de HTML llamada en la función,
+//la agrega al div correspondiente y le agrega el marcador de la ubicacion mas precisa 
+function mapa(lat, lon) {
+    loc = new google.maps.LatLng(lat, lon);
+    var mapProp = {
+        center: loc,
+        zoom: 15,
+    };
+    var map = new google.maps.Map(document.getElementById("map"), mapProp);
+    const marker = new google.maps.Marker({
+        position: loc,
+        map: map,
+      });      
+}
+

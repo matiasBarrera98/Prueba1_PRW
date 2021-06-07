@@ -107,7 +107,8 @@ footer{
 }
 
 .weather-cont{
-    width: 60%;
+    width: 80%;
+    height: 50%;
     border-radius: 25px;
     background-color: #00adb5;
     color:#393e46;
@@ -118,6 +119,11 @@ footer{
 .weather{
     padding: 0 10% 3%;
     
+}
+
+#map{
+    border-radius: 25px;
+    min-height: 90px;
 }
 
 .w-col{
