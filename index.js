@@ -2,7 +2,8 @@
 // codigos del clima que entrega la API
 var soleado = 1000
 var nublado = [1003, 1006, 1009, 1030, 1135,  1147, 1087]
-var lluvia = [1063, 1069, 1072, 1150, 266, 281, 284, 293, 296, 299, 302, 305, 308, 311]
+var lluvia = [1063, 1069, 1072, 1150, 1153, 1168, 1171, 1180, 1183, 1186, 1189, 1192, 1195, 1198,
+    1201, 1207, 1240, 1243, 1246, 1249, 1252, 1273, 1276]
 
 // función que maneja el clima en general
 function clima() {
