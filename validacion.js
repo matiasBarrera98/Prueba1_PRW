@@ -2,6 +2,17 @@
 
 $("#error").hide();
 
+$("#tipo").change(function(e){
+    var opcion = $("select option").filter(":selected").val();
+    if (opcion === "1"){
+        $("#rut-label").html("Rut");
+    }
+    else if (opcion === "2"){
+        $("#rut-label").html("Pasaporte");
+    }
+}   
+);
+
 $("#formulario").submit(function(e){
     var mensaje = "";
     var opcion = $("select option").filter(":selected").val();
