@@ -7,8 +7,6 @@ var lluvia = [1063, 1069, 1072, 1150, 1153, 1168, 1171, 1180, 1183, 1186, 1189, 
 
 // función que maneja el clima en general
 function clima() {
-    // if ($('#main_page')) {
-    // }
     navigator.geolocation.getCurrentPosition(function (p) {
         var lat;
         var lon;

@@ -199,9 +199,29 @@ footer{
     background-color: #00adb5;
 }
 
-.form .btn-primary{
+.form .send{
     background-color: #393e46;
     border-color:#eeee;
+}
+
+.form .clean{
+    background-color: #eeee;
+    border-color:#393e46;
+    color: #393e46;
+}
+
+.form .lista{
+    margin:auto;
+    background-color: #eeee;
+}
+
+.contact-buttons{
+    width: 30%;
+    margin:auto;
+}
+
+.form button{
+    margin: 5%;
 }
 
 /* Peluqueria */
