@@ -5,7 +5,7 @@ $("#error").hide();
 $("#tipo").change(function(e){
     var opcion = $("select option").filter(":selected").val();
     if (opcion === "1"){
-        $("#rut-label").html("Rut");
+        $("#rut-label").html("Rut sin puntos");
     }
     else if (opcion === "2"){
         $("#rut-label").html("Pasaporte");
